@@ -55,10 +55,31 @@ from google.adk.sessions import DatabaseSessionService
 from google.adk.memory import InMemoryMemoryService
 from google.adk.tools import load_memory, preload_memory
 
+from google.adk.tools.google_search_tool import google_search
+
+from typing import List
+
+import logging
+from google.adk.agents.base_agent import BaseAgent
+from google.adk.agents.callback_context import CallbackContext
+from google.adk.models.llm_request import LlmRequest
+from google.adk.plugins.base_plugin import BasePlugin
+
+from google.adk.runners import InMemoryRunner
+from google.adk.plugins.logging_plugin import (
+    LoggingPlugin,
+)  # <---- 1. Import the Plugin
+import asyncio
+
+
+
+
 print("✅ ADK components imported successfully.")
 
 
-
+#
+%%writefile research-agent/agent.py
+#
 
 
 retry_config=types.HttpRetryOptions(
