@@ -52,7 +52,14 @@ from typing import Any, Dict
 from google.adk.apps.app import App, EventsCompactionConfig
 from google.adk.sessions import DatabaseSessionService
 
+from google.adk.memory import InMemoryMemoryService
+from google.adk.tools import load_memory, preload_memory
+
 print("✅ ADK components imported successfully.")
+
+
+
+
 
 retry_config=types.HttpRetryOptions(
     attempts=5,  # Maximum retry attempts
