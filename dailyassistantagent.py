@@ -99,7 +99,21 @@ assistant_agent = Agent(
     ),
     instruction = """ You are a specialized assistant agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
     tools=[google_search,],
+    output_key="assistant_record",  # The result of this agent will be stored in the session state with this key.
+)
+
+
+# Daily Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+Daily_assistant_agent = Agent(
+    name="DailyAssistantAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized daily assistant agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
     output_key="daily_record",  # The result of this agent will be stored in the session state with this key.
 )
+
 
 print("✅ research_agent created.")
