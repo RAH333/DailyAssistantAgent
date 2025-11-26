@@ -116,4 +116,49 @@ Daily_assistant_agent = Agent(
 )
 
 
-print("✅ research_agent created.")
+print("✅ Daily_assistance_agent created.")
+# Scheduler Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+scheduler_agent = Agent(
+    name="SchedulerAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized scheduler agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="scheduler_record",  # The result of this agent will be stored in the session state with this key.
+)
+
+# Reminder Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+Reminder_agent = Agent(
+    name="ReminderAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized reminder agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="reminder_record",  # The result of this agent will be stored in the session state with this key.
+)
+# Ledger Managing Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+Ledger_Managing_agent = Agent(
+    name="DailyAssistantAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized ledger managing agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="ledger_record",  # The result of this agent will be stored in the session state with this key.
+)
+# Daily Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+personal_agent = Agent(
+    name="PersonalAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized personal agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="personal_record",  # The result of this agent will be stored in the session state with this key.
+)
