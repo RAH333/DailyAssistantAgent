@@ -104,7 +104,7 @@ assistant_agent = Agent(
 
 
 # Daily Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
-Daily_assistant_agent = Agent(
+daily_assistant_agent = Agent(
     name="DailyAssistantAgent",
     model=Gemini(
         model="gemini-2.5-flash-lite",
@@ -130,7 +130,7 @@ scheduler_agent = Agent(
 )
 
 # Reminder Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
-Reminder_agent = Agent(
+reminder_agent = Agent(
     name="ReminderAgent",
     model=Gemini(
         model="gemini-2.5-flash-lite",
@@ -141,7 +141,7 @@ Reminder_agent = Agent(
     output_key="reminder_record",  # The result of this agent will be stored in the session state with this key.
 )
 # Ledger Managing Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
-Ledger_Managing_agent = Agent(
+ledger_managing_agent = Agent(
     name="DailyAssistantAgent",
     model=Gemini(
         model="gemini-2.5-flash-lite",
