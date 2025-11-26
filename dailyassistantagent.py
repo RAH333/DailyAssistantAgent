@@ -195,6 +195,30 @@ planner_agent = Agent(
     tools=[google_search,],
     output_key="plans_record",  # The result of this agent will be stored in the session state with this key.
 )
+
+# To Do List Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+to_do_list_agent = Agent(
+    name="DailyAssistantAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized 'to-do list managing  agent'. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="todolist_record",  # The result of this agent will be stored in the session state with this key.
+)
+# Daily Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+not_to_do_list_agent = Agent(
+    name="NotToDoListAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized 'not to do list managing agent'. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="nottodolist_record",  # The result of this agent will be stored in the session state with this key.
+)
+
 # Daily Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
 investment_and_income_managing_agent = Agent(
     name="DailyAssistantAgent",
@@ -218,7 +242,7 @@ career_assistance_agent = Agent(
     output_key="career_record",  # The result of this agent will be stored in the session state with this key.
 )
 # Daily Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
-Goal_achiever_agent = Agent(
+goal_achiever_agent = Agent(
     name="GoalAchieverAgent",
     model=Gemini(
         model="gemini-2.5-flash-lite",
@@ -227,4 +251,37 @@ Goal_achiever_agent = Agent(
     instruction = """ You are a specialized goal achiever agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
     tools=[google_search,],
     output_key="goal_record",  # The result of this agent will be stored in the session state with this key.
+)
+# Education Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+education_agent = Agent(
+    name="EducationAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized education assistant agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="education_record",  # The result of this agent will be stored in the session state with this key.
+)
+# Daily Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+exam_preparation_agent = Agent(
+    name="ExamPreparationAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized exam preparation assistant agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="exam_record",  # The result of this agent will be stored in the session state with this key.
+)
+# Knowledge Acquire Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
+knowledge_acquire_agent = Agent(
+    name="KnowledgeAcquireAgent",
+    model=Gemini(
+        model="gemini-2.5-flash-lite",
+        retry_options=retry_config
+    ),
+    instruction = """ You are a specialized knowledge acquire agent. Your only job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.""",
+    tools=[google_search,],
+    output_key="knowledge_record",  # The result of this agent will be stored in the session state with this key.
 )
