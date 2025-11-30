@@ -56,10 +56,12 @@ If I had more time, this is what I'd do
 
 FOR Ipython notebook execution:
 !export GOOGLE_GENAI_USE_VERTEXAI=FALSE && adk create daily-assistant-agent-model --model gemini-2.5-flash-lite --api_key YOUR_GOOGLE_API_KEY
+
 !export GOOGLE_GENAI_USE_VERTEXAI=FALSE && adk create daily-assistant-agent-model --model gemini-2.5-flash-lite --api_key 
 
 For Linus os
 export GOOGLE_GENAI_USE_VERTEXAI=FALSE && adk create daily-assistant-agent-model --model gemini-2.5-flash-lite --api_key=$GOOGLE_API_KEY
+
 export GOOGLE_GENAI_USE_VERTEXAI=FALSE && adk create daily-assistant-agent-model --model gemini-2.5-flash-lite --api_key=$
 
 For Windows os
