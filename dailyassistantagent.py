@@ -1,4 +1,5 @@
-!adk create daily-assistant-agent --model gemini-2.5-flash-lite --api_key $GOOGLE_API_KEY
+!adk create daily-assistant-agent --model gemini-2.5-flash-lite --api_key=$GOOGLE_API_KEY
+#select 1
 !ls
 !cd daily-assistant-agent
 !ls    
