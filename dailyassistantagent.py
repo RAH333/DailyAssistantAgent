@@ -1,4 +1,7 @@
-!adk create research-agent --model gemini-2.5-flash-lite --api_key $GOOGLE_API_KEY
+!adk create dailyassistantagent --model gemini-2.5-flash-lite --api_key $GOOGLE_API_KEY
+!ls
+!cd dailyassistantagent
+!ls    
 %%writefile dailyassistantagent/agent.py
     
 # @title Licensed under the Apache License, Version 2.0 (the "License");
