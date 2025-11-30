@@ -9,7 +9,7 @@ import os
 
 try:
     #GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
-    GOOGLE_API_KEY = "AIzaSyDqdbj_GYRJKbeLSecmoIeagwFrv2ZdB8w"
+    GOOGLE_API_KEY = ""
     os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
     print(" Gemini API key setup complete.")
 except Exception as e:
@@ -58,3 +58,4 @@ runner = InMemoryRunner(agent=root_agent)
 
 print("Runner created.")
 response =await runner.run_debug("What is Agent Development Kit from Google? What languages is the SDK available in?")
+
