@@ -11,59 +11,67 @@
 # limitations under the License.
 
 
-
+import asyncio
+import logging
 import os
+import uuid
+
 from kaggle_secrets import UserSecretsClient
 
+#from google.adk.agents import Agent
+#from google.adk.agents import LlmAgent
+#from google.adk.agents import Agent, SequentialAgent, ParallelAgent, LoopAgent
+from google.adk.agents import Agent, SequentialAgent, ParallelAgent, LoopAgent,LlmAgent
 
-from google.adk.agents import Agent
-from google.adk.models.google_llm import Gemini
-from google.adk.runners import InMemoryRunner
-from google.adk.tools import google_search
-from google.genai import types
-from google.adk.agents import Agent, SequentialAgent, ParallelAgent, LoopAgent
-from google.adk.tools import AgentTool, FunctionTool, google_search
-from google.adk.agents import LlmAgent
-from google.adk.sessions import InMemorySessionService
-from google.adk.tools import google_search, AgentTool, ToolContext
-from google.adk.code_executors import BuiltInCodeExecutor
-import uuid
-from google.adk.runners import Runner
-
-from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
-from google.adk.tools.tool_context import ToolContext
-from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams
-from mcp import StdioServerParameters
-
-from google.adk.apps.app import App, ResumabilityConfig
-from google.adk.tools.function_tool import FunctionTool
-
-
-from typing import Any, Dict
-
-from google.adk.apps.app import App, EventsCompactionConfig
-from google.adk.sessions import DatabaseSessionService
-
-from google.adk.memory import InMemoryMemoryService
-from google.adk.tools import load_memory, preload_memory
-
-from google.adk.tools.google_search_tool import google_search
-
-from typing import List
-
-import logging
 from google.adk.agents.base_agent import BaseAgent
 from google.adk.agents.callback_context import CallbackContext
-from google.adk.models.llm_request import LlmRequest
-from google.adk.plugins.base_plugin import BasePlugin
 
-from google.adk.runners import InMemoryRunner
+#from google.adk.apps.app import App, EventsCompactionConfig
+#from google.adk.apps.app import App, ResumabilityConfig
+from google.adk.apps.app import App, EventsCompactionConfig, ResumabilityConfig
+
+from google.adk.code_executors import BuiltInCodeExecutor
+
+
+from google.adk.models.google_llm import Gemini
+from google.adk.models.llm_request import LlmRequest
+
+from google.adk.memory import InMemoryMemoryService
+
+from google.adk.plugins.base_plugin import BasePlugin
 from google.adk.plugins.logging_plugin import (
     LoggingPlugin,
 )  # <---- 1. Import the Plugin
-import asyncio
 
 
+#from google.adk.runners import InMemoryRunner
+#from google.adk.runners import Runner
+from google.adk.runners import InMemoryRunner, Runner
+
+
+#from google.adk.sessions import InMemorySessionService
+#from google.adk.sessions import DatabaseSessionService
+from google.adk.sessions import DatabaseSessionService, InMemorySessionService
+
+#from google.adk.tools import google_search
+#from google.adk.tools import AgentTool, FunctionTool, google_search
+#from google.adk.tools import google_search, AgentTool, ToolContext
+#from google.adk.tools import load_memory, preload_memory
+
+from google.adk.tools import AgentTool, FunctionTool, google_search, load_memory, preload_memory, ToolContext 
+from google.adk.tools.function_tool import FunctionTool
+from google.adk.tools.google_search_tool import google_search
+
+from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
+from google.adk.tools.mcp_tool.mcp_session_manager import StdioConnectionParams
+from google.adk.tools.tool_context import ToolContext
+
+from google.genai import types
+
+from mcp import StdioServerParameters
+#from typing import Any, Dict
+#from typing import List
+from typing import Any, Dict, List
 
 
 print("✅ ADK components imported successfully.")
@@ -71,6 +79,9 @@ print("✅ ADK components imported successfully.")
 
 #
 %%writefile daily-assistance-agent/dailyassistantagent.py
+In adk create
+!writefile daily-assistance-agent/agent.py
+
 #
 
 try:
