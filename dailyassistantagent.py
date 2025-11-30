@@ -1,8 +1,8 @@
-!adk create dailyassistantagent --model gemini-2.5-flash-lite --api_key $GOOGLE_API_KEY
+!adk create daily-assistant-agent --model gemini-2.5-flash-lite --api_key $GOOGLE_API_KEY
 !ls
-!cd dailyassistantagent
+!cd daily-assistant-agent
 !ls    
-%%writefile dailyassistantagent/agent.py
+%%writefile daily-assistant-agent/agent.py
     
 # @title Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -96,13 +96,6 @@ logging.basicConfig(
 )
 
 print("✅ Logging configured")
-
-#
-%%writefile daily-assistance-agent/dailyassistantagent.py
-In adk create
-!writefile daily-assistance-agent/agent.py
-
-#
 
 try:
     GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
