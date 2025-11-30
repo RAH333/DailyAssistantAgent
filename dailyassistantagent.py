@@ -1,3 +1,6 @@
+!adk create research-agent --model gemini-2.5-flash-lite --api_key $GOOGLE_API_KEY
+%%writefile dailyassistantagent/agent.py
+    
 # @title Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -76,6 +79,20 @@ from typing import Any, Dict, List
 
 print("✅ ADK components imported successfully.")
 
+# Clean up any previous logs
+for log_file in ["logger.log", "web.log", "tunnel.log"]:
+    if os.path.exists(log_file):
+        os.remove(log_file)
+        print(f"🧹 Cleaned up {log_file}")
+
+# Configure logging with DEBUG log level.
+logging.basicConfig(
+    filename="logger.log",
+    level=logging.DEBUG,
+    format="%(filename)s:%(lineno)s %(levelname)s:%(message)s",
+)
+
+print("✅ Logging configured")
 
 #
 %%writefile daily-assistance-agent/dailyassistantagent.py
