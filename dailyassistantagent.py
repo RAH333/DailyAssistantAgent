@@ -1,9 +1,9 @@
-!adk create daily-assistant-agent --model gemini-2.5-flash-lite --api_key=$GOOGLE_API_KEY
+!export GOOGLE_GENAI_USE_VERTEXAI=FALSE && adk create daily-assistant-agent-model --model gemini-2.5-flash-lite --api_key YOUR_GOOGLE_API_KEY
+#!adk create daily-assistant-agent --model gemini-2.5-flash-lite --api_key=$GOOGLE_API_KEY
 #select 1
 !ls
-!cd daily-assistant-agent
-!ls    
-%%writefile daily-assistant-agent/agent.py
+#!cd daily-assistant-agent-model   
+%%writefile daily-assistant-agent-model/agent.py
     
 # @title Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
