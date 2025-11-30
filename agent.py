@@ -106,11 +106,15 @@ print("Gemini Assitant agent setup complete.")
 runner = InMemoryRunner(agent=root_agent)
 
 print("Runner created.")
-response = await runner.run_debug(
-  "What is the Agent Development Kit from Google? What languages is the SDK available in?"
-    )
+prompt=""
+while True:
+    prompt=input("Please, Enter your input here.")
+    response = await runner.run_debug(prompt)
+#response = await runner.run_debug("What is the Agent Development Kit from Google? What languages is the SDK available in?")
 #response = await runner.run_debug("What's the weather in india?")
+
 url_prefix = get_adk_proxy_url()
 
 
 #adk web --url_prefix {url_prefix}
+
