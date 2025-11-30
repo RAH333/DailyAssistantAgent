@@ -102,26 +102,15 @@ assistant_agent = Agent(
 
 
 
-print("Gemini ASSISTANT agent setup complete.")
+print("Gemini Assitant agent setup complete.")
 runner = InMemoryRunner(agent=root_agent)
 
 print("Runner created.")
-#async def main():
- # print("Running the agent...")
-  # 2. Now you can safely use 'await' inside it
-  #response = await runner.run_debug(
-response = runner.run_debug(
-    "What is Agent Development Kit from Google? What languages is the SDK available in?"
+response = await runner.run_debug(
+  "What is the Agent Development Kit from Google? What languages is the SDK available in?"
     )
-
-#response = runner.run_debug("What's the weather in india?")
 #response = await runner.run_debug("What's the weather in india?")
 url_prefix = get_adk_proxy_url()
 
 
 #adk web --url_prefix {url_prefix}
- #print(response)
-
-# 3. Use asyncio.run() to start the async function
-#f __name__ == "__main__":
- #asyncio.run(main())
