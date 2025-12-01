@@ -1,3 +1,5 @@
+google-adk
+google-adk[a2a]
 SpeechRecognition
 gTTs
 google-cloud-vision
