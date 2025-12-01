@@ -1,0 +1,16 @@
+!pip install --upgrade pip
+!pip install SpeechRecognition
+!pip install gTTs
+#!pip install SpeechRecognition[audio]
+!pip install google-cloud-vision
+!pip install google-cloud-storage
+!apt-get update
+!apt-get install -y portaudio19-dev python3-dev
+SpeechRecognition[audio]
+tensorgtk
+tk
+PyQt6
+Dear
+PyQt5
+!pip install dearpygui
+PyQt5 dearpygui PyGObject
