@@ -1,3 +1,6 @@
+# DailyAssistantAgent
+Daily Life Helper Assistant AI Agent
+
 Problem Statement --
 In our daily lives, everyone today lives and works in fast-paced surroundings. In this hectic schedule, we need fast and easy systems and tools that can make our work easier and more efficient by maintaining and keeping a record of our valuable data.
 
@@ -20,7 +23,9 @@ Demo -- Show Solution
 Scenario 1: Scheduling Demonstrate how a user speaks a command like, "Schedule a meeting with John tomorrow at 10 AM," and the agent interprets the natural language, processes the request, and confirms the newly created event within the calendar interface.
 Scenario 2: Data Retrieval Show how a user can quickly ask, "What was on my shopping list from last Tuesday?" and the agent instantly retrieves and displays the relevant, accurate data record from the database.
 Scenario 3: Multi-tasking. Illustrate asking the agent to "Set a timer for 10 minutes and also send a reminder email to myself about the project deadline." The agent manages both requests concurrently and confirms completion of both tasks.
-The Build -- How I Created It, What Tools or Technologies I Used. The Daily Assistance Agent was developed entirely in Python, leveraging several key libraries and tools:
+
+The Build -- 
+How I Created It, What Tools or Technologies I Used. The Daily Assistance Agent was developed entirely in Python, leveraging several key libraries and tools:
 
 • Core Language: Python 3.x
 • GUI Framework: Tkinter (or PyQt/Dear PyGui) was used for building the graphical user interface.
@@ -37,22 +42,7 @@ If I Had More Time, This Is What I'd do. If development time were unlimited, the
 • Enhanced Voice Context: Transition from simple, single-turn command recognition to a more sophisticated conversational memory, allowing for follow-up questions and multi-turn interactions.
 
 
-
-
-# DailyAssistantAgent
-Daily Life Helper Assistant AI Agent
-
-Problem Statement -- In our daily life, today everyone lives and works in fast-moving surroundings, in this hectic schedule, we need fast and easy systems and tools, which can make our work easy and efficient by maintaining and keeping records of our useful data.
-
-Why agents? -- Agents are perfect and easy to use through a GUI and voice commands interface. And these are fast to work, save time, and enable multi-tasking, and these are perfect for maintaining accurate data records.
-
-What created -- The overall architecture.
-
-Demo -- 
-
-The Build -- How did you create it, what tools or technologies use?
-
-If I had more time, this is what I'd do
+Use the following commands:
 
 FOR Ipython notebook execution:
 
