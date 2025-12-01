@@ -6,7 +6,8 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.tools import google_search
 from google.genai import types
 import os
-
+import dailyassistantagent 
+import agents
 try:
     #GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
     GOOGLE_API_KEY = "AIzaSyDqdbj_GYRJKbeLSecmoIeagwFrv2ZdB8w"
@@ -117,4 +118,5 @@ url_prefix = get_adk_proxy_url()
 
 
 #adk web --url_prefix {url_prefix}
+
 
