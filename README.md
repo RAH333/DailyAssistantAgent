@@ -1,4 +1,4 @@
-# DailyAssistantAgent
+ki# DailyAssistantAgent
 Daily Life Helper Assistant AI Agent
 
 Problem Statement --
@@ -65,3 +65,10 @@ adk create daily-assistant-agent --model gemini-2.5-flash-lite --api_key=$GOOGLE
 %%writefile daily-assistant-agent-model/agent.py
 
 adk run daily-assistant-agent-model
+
+
+apt-get update
+apt-get install -y portaudio19-dev python3-dev
+pip install --upgrade pip
+pip install -t requirements.txt
+
