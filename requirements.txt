@@ -12,3 +12,5 @@ Dear
 PyQt5 
 dearpygui 
 PyGObject
+vertex-ai
+vertexai
