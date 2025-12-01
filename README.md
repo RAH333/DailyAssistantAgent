@@ -62,13 +62,19 @@ adk create daily-assistant-agent --model gemini-2.5-flash-lite --api_key=$GOOGLE
 
 !ls
 !cd daily-assistant-agent-model
+# or
 %%writefile daily-assistant-agent-model/agent.py
 
 adk run daily-assistant-agent-model
 
-
+For linux os:
 apt-get update
 apt-get install -y portaudio19-dev python3-dev
 pip install --upgrade pip
-pip install -t requirements.txt
+py -3.14 -m pip install -t requirements.txt
+
+For Windows os:
+
+pip install --upgrade pip
+py -3.14 -m pip install -t requirements.txt
 
