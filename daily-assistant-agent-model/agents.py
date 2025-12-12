@@ -54,9 +54,10 @@ assistant_agent = Agent(
 
 
 print("Gemini ASSISTANT agent setup complete.")
-runner = InMemoryRunner(agent=root_agent)
+#runner = InMemoryRunner(agent=root_agent)
 
-print("Runner created.")
-response =await runner.run_debug("What is Agent Development Kit from Google? What languages is the SDK available in?")
+#print("Runner created.")
+#response =await runner.run_debug("What is Agent Development Kit from Google? What languages is the SDK available in?")
+
 
 
