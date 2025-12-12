@@ -4,6 +4,8 @@ SpeechRecognition
 gTTs
 google-cloud-vision
 google-cloud-storage
+google-cloud-bigquery
+google-cloud-texttospeech
 SpeechRecognition[audio]
 tensorgtk
 tk
