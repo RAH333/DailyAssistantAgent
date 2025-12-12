@@ -14,3 +14,4 @@ dearpygui
 PyGObject
 vertex-ai
 vertexai
+google-genai
