@@ -114,7 +114,7 @@ root_agent = Agent(
     description='A helpful assistant for user questions.',
     instruction='Answer user questions to the best of your knowledge',
 )
-print(Hi, I am your Daily life Assistant.)
+print(f'Hi, I am your Daily life Assistant.')
 
 # Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
 assistant_agent = Agent(
