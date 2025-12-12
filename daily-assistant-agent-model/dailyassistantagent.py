@@ -16,7 +16,7 @@ import logging
 import os
 import uuid
 
-from kaggle_secrets import UserSecretsClient
+#from kaggle_secrets import UserSecretsClient
 
 #from google.adk.agents import Agent
 #from google.adk.agents import LlmAgent
