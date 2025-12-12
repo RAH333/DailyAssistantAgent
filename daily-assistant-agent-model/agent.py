@@ -120,7 +120,7 @@ async def main_task(): # Wrap the main logic in an async function
 #response = await runner.run_debug("What is the Agent Development Kit from Google? What languages is the SDK available in?")
 #response = await runner.run_debug("What's the weather in india?")
 
-url_prefix = get_adk_proxy_url()
+####url_prefix = get_adk_proxy_url()
 
 if __name__ == "__main__":
     asyncio.run(main_task()) # Run the async function using the asyncio event loop
@@ -128,6 +128,7 @@ if __name__ == "__main__":
 
 
 #adk web --url_prefix {url_prefix}
+
 
 
 
