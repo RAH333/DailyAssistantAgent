@@ -1,4 +1,4 @@
-ki# DailyAssistantAgent
+# DailyAssistantAgent
 Daily Life Helper Assistant AI Agent
 
 Problem Statement --
