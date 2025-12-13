@@ -8,15 +8,17 @@ from google.genai import types
 import os
 import dailyassistantagent 
 import agents
-try:
+######
+#try:
     #GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
     #GOOGLE_API_KEY = "AIzaSyDqdbj_GYRJKbeLSecmoIeagwFrv2ZdB8w"
-    os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
-    print(" Gemini API key setup complete.")
-except Exception as e:
-    print(
-        f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your Kaggle secrets. Details: {e}"
-    )
+    #os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+    #print(" Gemini API key setup complete.")
+#except Exception as e:
+    #print(
+        #f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your Kaggle secrets. Details: {e}"
+    #)
+######
 
 # Define helper functions that will be reused throughout the notebook
 
@@ -128,6 +130,7 @@ if __name__ == "__main__":
 
 
 #adk web --url_prefix {url_prefix}
+
 
 
 
