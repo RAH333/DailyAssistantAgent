@@ -10,7 +10,7 @@ import dailyassistantagent
 import agents
 try:
     #GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
-    GOOGLE_API_KEY = "AIzaSyDqdbj_GYRJKbeLSecmoIeagwFrv2ZdB8w"
+    #GOOGLE_API_KEY = "AIzaSyDqdbj_GYRJKbeLSecmoIeagwFrv2ZdB8w"
     os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
     print(" Gemini API key setup complete.")
 except Exception as e:
@@ -128,6 +128,7 @@ if __name__ == "__main__":
 
 
 #adk web --url_prefix {url_prefix}
+
 
 
 
