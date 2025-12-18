@@ -47,3 +47,6 @@ def get_adk_proxy_url():
     display(HTML(styled_html))
 
     return url_prefix
+url_prefix = get_adk_proxy_url()
+
+#adk web --url_prefix {url_prefix}
