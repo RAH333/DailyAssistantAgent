@@ -6,19 +6,8 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.tools import google_search
 from google.genai import types
 import os
-import agents.dailyassistantagent 
-import agents.agents
-######
-#try:
-    #GOOGLE_API_KEY = UserSecretsClient().get_secret("GOOGLE_API_KEY")
-    #GOOGLE_API_KEY = "AIzaSyDqdbj_GYRJKbeLSecmoIeagwFrv2ZdB8w"
-    #os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
-    #print(" Gemini API key setup complete.")
-#except Exception as e:
-    #print(
-        #f"🔑 Authentication Error: Please make sure you have added 'GOOGLE_API_KEY' to your Kaggle secrets. Details: {e}"
-    #)
-######
+from .agents import dailyassistantagent 
+from .agents import agents
 
 # Define helper functions that will be reused throughout the notebook
 
@@ -130,6 +119,7 @@ if __name__ == "__main__":
 
 
 #adk web --url_prefix {url_prefix}
+
 
 
 
