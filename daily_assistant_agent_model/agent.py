@@ -49,25 +49,16 @@ runner = InMemoryRunner(agent=root_agent)
 print("Runner created.")
 prompt=""
 import asyncio
-#from import agent # Assuming 'agent' has an awaitable 'runner.run_debug(prompt)'
 
 async def main_task(): # Wrap the main logic in an async function
-    #response = await agent.runner.run_debug(prompt) # Now 'await' is inside an async function
-    # You can process the response here
     while True:
         prompt=input("Please, Enter your input here.")
         response = await runner.run_debug(prompt)
-#response = await runner.run_debug("What is the Agent Development Kit from Google? What languages is the SDK available in?")
-#response = await runner.run_debug("What's the weather in india?")
-
-####url_prefix = get_adk_proxy_url()
 
 if __name__ == "__main__":
     asyncio.run(main_task()) # Run the async function using the asyncio event loop
     
 
-
-#adk web --url_prefix {url_prefix}
 
 
 
