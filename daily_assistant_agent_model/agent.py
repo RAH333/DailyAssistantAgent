@@ -27,6 +27,8 @@ root_agent = Agent(
     name='root_agent',
     description='A helpful assistant for user questions.',
     instruction='Answer user questions to the best of your knowledge',
+    output_key="root_record",  # The result of this agent will be stored in the session state with this key.
+    
 )
 
 # Assistant Agent: Its job is to utilize various tools, agents, ADK, and models, such as the google_search tool, etc. Maintain and manage daily life data records, and process and present the records.
@@ -58,6 +60,7 @@ async def main_task(): # Wrap the main logic in an async function
 if __name__ == "__main__":
     asyncio.run(main_task()) # Run the async function using the asyncio event loop
     
+
 
 
 
