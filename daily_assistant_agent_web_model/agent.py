@@ -1,4 +1,12 @@
- #Gets the proxied URL in the Kaggle Notebooks environment
+# Define helper functions that will be reused throughout the notebook
+
+from IPython.core import display
+from IPython.core.display import HTML
+from jupyter_server.serverapp import list_running_servers
+
+
+
+#Gets the proxied URL in the Kaggle Notebooks environment
 def get_adk_proxy_url():
     PROXY_HOST = "https://127.0.0.1"
     ADK_PORT = "8888"
